@@ -93,7 +93,7 @@
     mode: '0755'
 
 - name: Copy Trivy repo
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: trivy.repo
     dest: /etc/yum.repos.d/trivy.repo
 
@@ -103,7 +103,7 @@
     state: installed
 
 - name: COpy kubectl repo
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: kubectl.repo
     dest: /etc/yum.repos.d/kubectl.repo
 
