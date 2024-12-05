@@ -20,7 +20,7 @@
     mode: '0755'
 
 - name: start minikube
-  ansible.builtin.shell: minikube start --force
+  ansible.builtin.shell: minikube start --memory 1200m --force
   
 
 
