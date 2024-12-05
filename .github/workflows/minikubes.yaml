@@ -7,4 +7,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: echo $PATH
       - name: minikube
-        run: ansible-playbook -i , setup-tools-ansible.yml -e ansible_user=ec2-user -e ansible_password=DevOps321 -e tool_name=minikube
+        run: ansible-playbook -i 54.158.46.92 , setup-tools-ansible.yml -e ansible_user=ec2-user -e ansible_password=DevOps321 -e tool_name=minikube
