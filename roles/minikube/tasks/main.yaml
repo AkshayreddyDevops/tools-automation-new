@@ -1,0 +1,15 @@
+- name: Setup Prompt
+  ansible.builtin.shell: set-prompt minikube
+
+- name: Extend Disk Volume
+  ansible.builtin.shell: growpart /dev/nvme0n1 4; lvextend -r -L +10G /dev/mapper/RootVG-varVol
+  ignore_errors: true
+
+- name: Ansible minikube
+  ansible.builtin.shell: https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm -y 
+
+- name: Install docker
+  ansible.builtin.dnf:
+    name: docker
+    state: latest
+

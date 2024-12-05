@@ -1,0 +1,1 @@
+ansibke-playbool -i ${tool_ip}, -e ansible_user=ec2-user ansible_password=DevOps321  -e tool_name setup-tool-ansible.yml
