@@ -6,10 +6,21 @@
   ignore_errors: true
 
 - name: Ansible minikube
-  ansible.builtin.shell: https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm -y 
+  ansible.builtin.shell: dnf install https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm -y 
 
 - name: Install docker
   ansible.builtin.dnf:
     name: docker
     state: latest
+
+- name: Download kubectl
+  ansible.builtin.get_url:
+    url: https://dl.k8s.io/release/v1.30.3/bin/linux/amd64/kubectl
+    dest: /bin/kubectl
+    mode: '0755'
+
+- name: start minikube
+  ansible.builtin.shell: minikube start --force
+  
+
 
