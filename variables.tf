@@ -26,7 +26,7 @@ variable "tools" {
       ports = {
         vault = 8443
       }
-      policy_action = []
+      policy_name = []
       volume_size = 30      
     }
   }
