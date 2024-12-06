@@ -23,7 +23,7 @@ variable "tools" {
     minikube = {
       name = "minikube"
       instance_type = "t3.medium"
-      port_no = {
+      ports = {
         vault = 8443
       }
       policy_action = []
