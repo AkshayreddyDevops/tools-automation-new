@@ -20,15 +20,15 @@ variable "tools" {
     #   volume_size = 20
     # }
 
-    # minikube = {
-    #   name = "minikube"
-    #   instance_type = "t3.medium"
-    #   ports = {
-    #     vault = 8443
-    #   }
-    #   policy_name = []
-    #   volume_size = 30      
-    # }
+    minikube = {
+      name = "minikube"
+      instance_type = "t3.medium"
+      ports = {
+        vault = 8443
+      }
+      policy_name = []
+      volume_size = 30      
+    }
   }
 }
 
