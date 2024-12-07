@@ -1,1 +1,1 @@
-ansible-playbook -i $1, -e ansible_user=ec2-user -e ansible_password=DevOps321  -e $2 setup-tools-ansible.yml
+ansible-playbook -i $1, -e ansible_user=ec2-user -e ansible_password=DevOps321  -e tool_name=$2 setup-tools-ansible.yml
