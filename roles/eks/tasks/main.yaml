@@ -1,10 +1,8 @@
 apiversion: eksctl.io/v1alpha5
 kind: ClusterConfig
-
 metadata:
   name: test
   reagion: us-east-1
-
 nodeGroup:
   - name: ng-1-worker
     instance_type: t3.medium
