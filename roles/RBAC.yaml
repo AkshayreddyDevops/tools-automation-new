@@ -8,7 +8,7 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: debug
+  name: debug01
   namespace: default
 spec:
   serviceAccountName: debug
