@@ -80,7 +80,7 @@ data:
   AMQP_USER=roboshop
   AMQP_PASS=roboshop123
 ---
-apiVersion: v1
+appVersion: v1
 kind: Secret
 metadata:
   name: sample-secreate
