@@ -175,57 +175,57 @@ spec:
           mountPath: /etc/config
       env:
         - name: password
-          valuesFrom:
+          valueFrom:
             secretKeyRef:
               name: sample-secreate
               key: password
         - name: CATALOGUE_HOST
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: CATALOGUE_HOST
         - name: CATALOGUE_PORT
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: CATALOGUE_PORT
         - name: USER_HOST
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: USER_HOST
         - name: USER_PORT
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: USER_PORT
         - name: CART_HOST
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: CART_HOST
         - name: CART_PORT
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: CART_PORT
         - name: SHIPPING_HOST
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: SHIPPING_HOST
         - name: SHIPPING_PORT
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: SHIPPING_PORT
         - name: PAYMENT_HOST
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: PAYMENT_HOST
         - name: PAYMENT_PORT
-          valuesFrom:
+          valueFrom:
             configMapKeyRef:
               name: frontend-cm
               key: PAYMENT_PORT
