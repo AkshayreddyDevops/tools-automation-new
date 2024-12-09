@@ -13,7 +13,7 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: debug
+  name: debug-n
   namespace: frontend
   labels:
     appType: UI
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: debug
+  name: nginx-np
   namespace: backend
   labels:
     appType: API
