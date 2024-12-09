@@ -46,7 +46,7 @@ kind: ConfigMap
 metadata:
   name: user-cm
 data:
-  MONGO: true
+  MONGO: "true"
   MONGO_URL: mongodb://mongo-ip:27017/catalogue
   REDIS_URL: redis://redis-ip:6379
 ---
