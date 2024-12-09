@@ -173,6 +173,13 @@ spec:
       volumeMounts:
         - name: config-volume
           mountPath: /etc/config
+      resources:
+        limits:
+          memory: 50Mi
+          cpu: "50m"
+        requests:
+          memory: 50Mi
+          cpu: "50m"
       env:
         - name: password
           valueFrom:
