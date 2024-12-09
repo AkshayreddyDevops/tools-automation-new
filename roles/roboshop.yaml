@@ -173,7 +173,7 @@ spec:
       volumeMounts:
         - name: config-volume
           mountPath: /etc/config
-  volume:
+  volumes:
     - name: config-volume
       configMap:
         name: catalogue-service-cm
