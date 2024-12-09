@@ -245,8 +245,8 @@ spec:
     - name: catalogue
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/catalogue
       envFrom:
-        configMapRef:
-          name: catalogue-cm
+        - configMapRef:
+            name: catalogue-cm
 ---
 apiVersion: v1
 kind: Pod
@@ -259,8 +259,8 @@ spec:
     - name: cart
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/cart
       envFrom:
-        configMapRef:
-          name: cart-cm
+        - configMapRef:
+            name: cart-cm
 ---
 apiVersion: v1
 kind: Pod
@@ -273,8 +273,8 @@ spec:
     - name: shipping
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/shipping
       envFrom:
-        configMapRef:
-          name: shipping-cm
+        - configMapRef:
+            name: shipping-cm
 ---
 apiVersion: v1
 kind: Pod
@@ -287,8 +287,8 @@ spec:
     - name: user
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/user
       envFrom:
-        configMapRef:
-          name: user-cm
+        - configMapRef:
+            name: user-cm
 ---
 apiVersion: v1
 kind: Pod
@@ -301,5 +301,5 @@ spec:
     - name: payment
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/payment
       envFrom:
-        configMapRef:
-          name: payment-cm
+        - configMapRef:
+            name: payment-cm
