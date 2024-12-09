@@ -173,10 +173,6 @@ spec:
       volumeMounts:
         - name: config-volume
           mountPath: /etc/config
-  volumes:
-    - name: config-volume
-      configMap:
-        name: catalogue-service-cm
       env:
         - name: password
           valuesFrom:
@@ -233,6 +229,10 @@ spec:
             configMapKeyRef:
               name: frontend-cm
               key: PAYMENT_PORT
+  volumes:
+    - name: config-volume
+      configMap:
+        name: catalogue-service-cm    
 ---
 apiVersion: v1
 kind: Pod
