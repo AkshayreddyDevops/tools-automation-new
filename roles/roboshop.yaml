@@ -3,16 +3,16 @@ kind: ConfigMap
 metadata:
   name: frontend-cm
 data:
-  CATALOGUE_HOST=catalogue-ip
-  CATALOGUE_PORT=catalogue-port
-  USER_HOST=user-host
-  USER_PORT=user-port
-  CART_HOST=cart-host
-  CART_PORT=cart-port
-  SHIPPING_HOST=shipping-host
-  SHIPPING_PORT=shipping-port
-  PAYMENT_HOST=payment-host
-  PAYMENT_PORT=payment-port
+  CATALOGUE_HOST: catalogue-ip
+  CATALOGUE_PORT: catalogue-port
+  USER_HOST: user-host
+  USER_PORT: user-port
+  CART_HOST: cart-host
+  CART_PORT: cart-port
+  SHIPPING_HOST: shipping-host
+  SHIPPING_PORT: shipping-port
+  PAYMENT_HOST: payment-host
+  PAYMENT_PORT: payment-port
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -38,47 +38,47 @@ kind: ConfigMap
 metadata:
   name: catalogue-cm
 data:
-  MONGO=true
-  MONGO_URL="mongodb://mongo-ip:27017/catalogue"
+  MONGO: "true"
+  MONGO_URL: mongodb://mongo-ip:27017/catalogue
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: user-cm
 data:
-  MONGO=true
-  MONGO_URL="mongodb://mongo-ip:27017/catalogue"
-  REDIS_URL="redis://redis-ip:6379"
+  MONGO: true
+  MONGO_URL: mongodb://mongo-ip:27017/catalogue
+  REDIS_URL: redis://redis-ip:6379
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cart-cm
 data:
-  CATALOGUE_HOST=catalogue-ip
-  CATALOGUE_PORT=catalogue-port
-  REDIS_URL="redis://redis-ip:6379"
+  CATALOGUE_HOST: catalogue-ip
+  CATALOGUE_PORT: catalogue-port
+  REDIS_URL: redis://redis-ip:6379
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: shipping-cm
 data:
-  CART_ENDPOINT=cart-ip:cart-port
-  DB_HOST=mysql-ip
+  CART_ENDPOINT: cart-ip:cart-port
+  DB_HOST: mysql-ip
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: payment-cm
 data:
-  CART_HOST=cart-ip
-  CART_PORT=8080
-  USER_HOST=user-ip
-  USER_PORT=8080
-  AMQP_HOST=rabbitmq-ip
-  AMQP_USER=roboshop
-  AMQP_PASS=roboshop123
+  CART_HOST: cart-ip
+  CART_PORT: "8080"
+  USER_HOST: user-ip
+  USER_PORT: "8080"
+  AMQP_HOST: rabbitmq-ip
+  AMQP_USER: roboshop
+  AMQP_PASS: roboshop123
 ---
 apiVersion: v1
 kind: Secret
