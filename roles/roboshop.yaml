@@ -80,14 +80,14 @@ data:
   AMQP_USER=roboshop
   AMQP_PASS=roboshop123
 ---
-appVersion: v1
+apiVersion: v1
 kind: Secret
 metadata:
   name: sample-secreate
 data:
   password: "YWJjZEAxMjM0"
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: frontend
@@ -100,7 +100,7 @@ spec:
       port: 80
       targetPort: 80
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: catalogue
@@ -112,7 +112,7 @@ spec:
       port: 8080
       targetPort: 8080
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: cart
@@ -124,7 +124,7 @@ spec:
       port: 8080
       targetPort: 8080
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: user
@@ -136,7 +136,7 @@ spec:
       port: 8080
       targetPort: 8080
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: shipping
@@ -148,7 +148,7 @@ spec:
       port: 8080
       targetPort: 8080  
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: shipping
@@ -160,7 +160,7 @@ spec:
       port: 8080
       targetPort: 8080 
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: frontend
@@ -234,7 +234,7 @@ spec:
               name: frontend-cm
               key: PAYMENT_PORT
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: catalogue
@@ -248,7 +248,7 @@ spec:
         configMapRef:
           name: catalogue-cm
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: cart
@@ -262,7 +262,7 @@ spec:
         configMapRef:
           name: cart-cm
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: shipping
@@ -276,7 +276,7 @@ spec:
         configMapRef:
           name: shipping-cm
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: user
@@ -290,7 +290,7 @@ spec:
         configMapRef:
           name: user-cm
 ---
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: payment
