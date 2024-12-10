@@ -35,7 +35,7 @@ spec:
     run: php-apache
 ---
 apiVersion: autoscaling/v2
-kind: HorizantalPodAutoscaler
+kind: HorizantelPodAutoscaler
 metadata:
   name: php-apachep-hpa
 spec:
