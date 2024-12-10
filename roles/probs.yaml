@@ -1,11 +1,11 @@
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: probs-example
   labels:
     test: liveness
 spec:
-  container:
+  containers:
   - name: liveness
     image: registry.k8s.io/busybox
     args:
