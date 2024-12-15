@@ -1,5 +1,6 @@
 def plugins = [
-  "workflow-multibranch"
+  'workflow-multibranch',
+  'git'
 ]
 
 def instance = Jenkins.getInstance()
