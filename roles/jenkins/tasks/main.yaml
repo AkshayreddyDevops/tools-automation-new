@@ -1,0 +1,16 @@
+- name: Create directory
+  ansible.builtin.file:
+    path: /var/lib/jenkins/init.groovy.d
+    state: directory
+    owner: jenkins
+    group: jenkins
+
+- name: Copy files from template
+  ansible.builtin.template:
+    src: "{{ items }}.groovy"
+    dest: /var/lib/jenkins/init.groovy.d/{{ item }}.groovy
+    owner: jenkins
+    group: jenkins
+  loop:
+    - 01-jenkines-plugins
+  
