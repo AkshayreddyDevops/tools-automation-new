@@ -2,6 +2,7 @@
    ansible.builtin.template:
      src: mbranch.xml
      dest: /tmp/mbranch.xml
+     
 -  name: Create Jenkins job
    community.general.jenkins_job:
      config: "{{ lookup('file','/tmp/mbranch.xml') }}"
