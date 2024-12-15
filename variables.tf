@@ -1,6 +1,6 @@
 variable "tools" {
   default = {
-    github-runner = {
+    jenkins = {
       name = "github-runner-new"
       instance_type = "t3.small"
       policy_name = [
