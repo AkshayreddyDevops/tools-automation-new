@@ -1,5 +1,5 @@
 - name: Jenkins setup
-  when: skip_install | boolen # send variable skip_install=true
+  when: skip_install | bool # send variable skip_install=true
   block:
   - name: Create directory
     ansible.builtin.file:
@@ -18,7 +18,7 @@
       - 01-jenkines-plugins
 
 - name: Create jobs block
-  when: create_job | boolen# send variable create_job=true
+  when: create_job | bool # send variable create_job=true
   ansible.builtin.include_tasks:
     file: mbranch-job.yaml
   loop:
