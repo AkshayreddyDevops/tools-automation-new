@@ -10,15 +10,15 @@ variable "tools" {
       ports = {}
     }
 
-    jumphost = {
-      name = "jumphost"
-      instance_type = "t3.small"
-      policy_name = [
-        "AdministratorAccess"
-      ]
-      volume_size = 20
-      ports = {}
-    }
+    # jumphost = {
+    #   name = "jumphost"
+    #   instance_type = "t3.small"
+    #   policy_name = [
+    #     "AdministratorAccess"
+    #   ]
+    #   volume_size = 20
+    #   ports = {}
+    # }
 
     # vault = {
     #   name = "vault"
