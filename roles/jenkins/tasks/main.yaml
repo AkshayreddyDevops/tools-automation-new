@@ -1,21 +1,21 @@
 - name: Jenkins setup
   when: skip_install | bool # send variable skip_install=true
   block:
-    - name: Create directory
-      ansible.builtin.file:
-        path: /var/lib/jenkins/init.groovy.d
-        state: directory
-        owner: jenkins
-        group: jenkins
-    - name: Copy files from template
-      ansible.builtin.template:
-        src: "{{ item }}.groovy"
-        dest: /var/lib/jenkins/init.groovy.d/{{ item }}.groovy
-        owner: jenkins
-        group: jenkins
-      loop:
-        - 01-jenkines-plugins
-        - mbranch.xml
+  - name: Create directory
+    ansible.builtin.file:
+      path: /var/lib/jenkins/init.groovy.d
+      state: directory
+      owner: jenkins
+      group: jenkins
+  - name: Copy files from template
+    ansible.builtin.template:
+      src: "{{ item }}.groovy"
+      dest: /var/lib/jenkins/init.groovy.d/{{ item }}.groovy
+      owner: jenkins
+      group: jenkins
+    loop:
+      - 01-jenkines-plugins
+      - mbranch.xml
 
 - name: Create jobs block
   when: create_job | bool # send variable create_job=true
