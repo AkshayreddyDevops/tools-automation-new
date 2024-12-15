@@ -1,7 +1,17 @@
 variable "tools" {
   default = {
     jenkins = {
-      name = "github-runner-new"
+      name = "jenkins"
+      instance_type = "t3.small"
+      policy_name = [
+        "AdministratorAccess"
+      ]
+      volume_size = 20
+      ports = {}
+    }
+
+    jumphost = {
+      name = "jumphost"
       instance_type = "t3.small"
       policy_name = [
         "AdministratorAccess"
