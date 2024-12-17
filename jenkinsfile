@@ -1,14 +1,29 @@
 pipeline {
   agent any
   stages {
-    stage('one') {
-      steps {
-        sh "echo one"
+    stage('compile'){
+      steps{
+        echo "compile"
       }
     }
-    stage('two') {
-      steps {
-        sh "echo two"
+    stage('Test Cases'){
+      steps{
+        echo "Test Case"
+      }
+    }
+    stage('Docker Build'){
+      steps{
+        echo "Docker Build"
+      }
+    }
+    stage('Docker Push'){
+      steps{
+        echo "Docker Push"
+      }
+    }
+    stage('Deply to Dev'){
+      steps{
+        echo "Deply to Dev"
       }
     }
   }
