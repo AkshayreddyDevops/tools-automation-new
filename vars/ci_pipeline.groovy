@@ -12,7 +12,7 @@ def call(){
    }
   }
   else {
-  stage('compile'){
+  stage('compile Code'){
     print 'compile'
   }
   if(env.BRANCH_NAME != 'main') {
