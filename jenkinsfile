@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('compile'){
-      when { 'branch' 'main'}
+      when { not { branch '*' }tag ''}
       steps{
         echo "compile"
       }
