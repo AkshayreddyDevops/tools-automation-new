@@ -14,16 +14,19 @@ pipeline {
       }
     }
     stage('Docker Build'){
+      when { expression { env.BRANCH_NAME != 'main'} }
       steps{
         echo "Docker Build"
       }
     }
     stage('Docker Push'){
+      when { expression { env.BRANCH_NAME != 'main'} }
       steps{
         echo "Docker Push"
       }
     }
     stage('Deply to Dev'){
+      when { expression { env.BRANCH_NAME != 'main'} }
       steps{
         echo "Deply to Dev"
       }
