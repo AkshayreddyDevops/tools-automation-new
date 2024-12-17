@@ -10,11 +10,11 @@
   - name: Copy files from template
     ansible.builtin.template:
       src: "{{ item }}.groovy"
-      dest: /var/lib/jenkins/init.groovy.d/{{ item }}.groovy
+      dest: /var/lib/jenkins/init.groovy.d/{{ item }}
       owner: jenkins
       group: jenkins
     loop:
-      - 01-jenkines-plugins
+      - 01-jenkines-plugins.groovy
       - mbranch.xml
 
 - name: Create jobs block
