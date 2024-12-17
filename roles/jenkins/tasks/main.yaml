@@ -18,6 +18,7 @@
       - mbranch.xml
       - shared-library.groovy
 
+
 - name: Create jobs block
   when: create_job | bool # send variable create_job=true
   ansible.builtin.include_tasks:
