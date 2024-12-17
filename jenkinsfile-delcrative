@@ -1,0 +1,49 @@
+pipeline {
+  agent any
+  stages {
+    stage('compile'){
+      steps{
+        echo "compile"
+      }
+    }
+    stage('Test Cases'){
+      when { expression { env.BRANCH_NAME != 'main'} }
+      steps{
+        echo "Test Case"
+      }
+    }
+    stage('Docker Build'){
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
+      steps{
+        echo "Docker Build"
+      }
+    }
+    stage('Docker Push'){
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
+      steps{
+        echo "Docker Push"
+      }
+    }
+    stage('Deply to Dev'){
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
+      steps{
+        echo "Deply to Dev"
+      }
+    }
+  }
+}
