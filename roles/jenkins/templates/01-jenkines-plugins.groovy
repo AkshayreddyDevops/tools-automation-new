@@ -1,6 +1,7 @@
 def plugins = [
   'workflow-multibranch',
-  'git'
+  'git',
+  'pipeline-stage-view'
 ]
 
 def instance = Jenkins.getInstance()
