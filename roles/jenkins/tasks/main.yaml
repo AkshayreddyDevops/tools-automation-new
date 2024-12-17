@@ -16,6 +16,7 @@
     loop:
       - 01-jenkines-plugins.groovy
       - mbranch.xml
+      - test.xml
 
 - name: Create jobs block
   when: create_job | bool # send variable create_job=true
