@@ -2,12 +2,6 @@ pipeline {
   agent any
   stages {
     stage('compile'){
-      when { 
-        not { 
-          branch '*' 
-          } 
-          tag ''
-        }
       steps{
         echo "compile"
       }
@@ -19,19 +13,34 @@ pipeline {
       }
     }
     stage('Docker Build'){
-      when { expression { env.BRANCH_NAME != 'main'} }
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
       steps{
         echo "Docker Build"
       }
     }
     stage('Docker Push'){
-      when { expression { env.BRANCH_NAME != 'main'} }
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
       steps{
         echo "Docker Push"
       }
     }
     stage('Deply to Dev'){
-      when { expression { env.BRANCH_NAME != 'main'} }
+      when { 
+        not { 
+          branch '*' 
+          } 
+          tag ''
+        }
       steps{
         echo "Deply to Dev"
       }
