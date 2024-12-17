@@ -2,11 +2,13 @@ pipeline {
   agent any
   stages {
     stage('compile'){
+      when { 'branch' 'main'}
       steps{
         echo "compile"
       }
     }
     stage('Test Cases'){
+      when { env.BRANCH_NAME != 'main'}
       steps{
         echo "Test Case"
       }
