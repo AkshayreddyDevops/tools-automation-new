@@ -8,7 +8,7 @@ pipeline {
       }
     }
     stage('Test Cases'){
-      when { env.BRANCH_NAME != 'main'}
+      when { expression { env.BRANCH_NAME != 'main'} }
       steps{
         echo "Test Case"
       }
