@@ -9,7 +9,7 @@
       group: jenkins
   - name: Copy files from template
     ansible.builtin.template:
-      src: "{{ item }}.groovy"
+      src: "{{ item }}"
       dest: /var/lib/jenkins/init.groovy.d/{{ item }}
       owner: jenkins
       group: jenkins
