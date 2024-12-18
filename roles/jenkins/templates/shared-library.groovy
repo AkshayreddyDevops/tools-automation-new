@@ -2,7 +2,7 @@ import jenkins.model.*;
 import org.jenkinsci.plugins.workflow.libs.*;
 import jenkins.scm.api.SCMSource;
 
-SCMSource scm = new jenkins.plugins.git.GitSCMSource("https://github.com/AkshayreddyDevops/tools-automation-new.git")
+SCMSource scm = new jenkins.plugins.git.GitSCMSource("https://github.com/AkshayreddyDevops/{{ item.jobDescription }}")
 scm.setCredentialsId("")
 
 LibraryRetriever libRetriever = new SCMSourceRetriever(scm)
