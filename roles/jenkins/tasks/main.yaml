@@ -24,7 +24,14 @@
   ansible.builtin.include_tasks:
     file: mbranch-job.yaml
   loop:
-    - {jobName: 'test-1'}
+    - {jobName: 'test-1', jobDescription: 'test job', repo_name: 'tools-automation-new.git'}
+    - {jobName: 'roboshop-catalogue', jobDescription: 'catalogue ms', repo_name: 'roboshop-catalogue.git'}
+    - {jobName: 'roboshop-frontend', jobDescription: 'frontend ms', repo_name: 'roboshop-frontend.git'}
+    - {jobName: 'roboshop-dispatch', jobDescription: 'dispatch ms', repo_name: 'roboshop-dispatch.git'}
+    - {jobName: 'roboshop-payment', jobDescription: 'payment ms', repo_name: 'roboshop-payment.git'}
+    - {jobName: 'roboshop-shipping', jobDescription: 'shipping ms', repo_name: 'roboshop-shipping.git'}
+    - {jobName: 'roboshop-user', jobDescription: 'user ms', repo_name: 'roboshop-user.git'}
+    - {jobName: 'roboshop-cart', jobDescription: 'cart ms', repo_name: 'roboshop-cart.git'}
     
 
   
