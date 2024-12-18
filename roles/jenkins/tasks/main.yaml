@@ -1,4 +1,4 @@
 - name: Create Jobs
   ansible.builtin.include_tasks:
-    file: create-job.yml
+    file: create-job.yaml
   loop: "{{ jobs }}"
