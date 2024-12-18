@@ -10,4 +10,14 @@
      url: http://localhost:8080
      password: akshay
      user: akshay
-     
+
+- name: Copy files from template
+  ansible.builtin.template:
+    src: "{{ item }}"
+    dest: /var/lib/jenkins/init.groovy.d/{{ item }}
+    owner: jenkins
+    group: jenkins
+  loop:
+    - 01-jenkines-plugins.groovy
+    - mbranch.xml
+    - shared-library.groovy
